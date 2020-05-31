@@ -6,18 +6,22 @@ terraform {
     container_name       = "terraformstate-tst"
     key                  = "Dev.terraform.tfstate"
 	access_key = "9cSLNVNaOTy3FK5RNjrOHynvw940gmfKsNv0EXa685KYaMWRPzxcFGvliyCiR5Z+Aru8adC+QfySWWDQ8EdbXA=="
+#	subscription_id = "049b4809-15cc-4329-9293-86fb9830d679"
+#    tenant_id       = "2a6e7c50-7422-4392-a932-3e5fa8eccf33"
   }
 }
 
 # Configure the Microsoft Azure Provider
 provider "azurerm" {
-      version = "2.5.0"
+#skip_provider_registration = "true"
+      version = "2.6.0"
     features {}
 
   subscription_id = "049b4809-15cc-4329-9293-86fb9830d679"
-#  client_id    = ""
-# client_secret= ""
   tenant_id       = "2a6e7c50-7422-4392-a932-3e5fa8eccf33"
+  client_id       = "d3d9508d-5f3f-404d-9f9a-29cca7c2a06e"
+  client_secret   = "0%7O([!S4=x\\|sZIeE>=h?/SbeRJx$?="
+
 }
 
 ####################
